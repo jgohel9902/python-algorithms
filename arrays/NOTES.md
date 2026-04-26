@@ -5,3 +5,9 @@
 - **Time:** O(n) — single pass
 - **Space:** O(n) — hash map storage
 - **Key insight:** For each number, check if `target - num` was already seen
+
+## Best Time to Buy and Sell Stock
+- **Approach:** Single pass, track min price and max profit
+- **Time:** O(n) — one iteration
+- **Space:** O(1) — no extra data structures
+- **Key insight:** At each price, ask "is this the lowest I've seen?" and "is selling here the best profit?"
