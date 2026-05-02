@@ -18,3 +18,12 @@
   current_sum = max(num, current_sum + num)
 - **Edge case:** Works with all-negative arrays — returns least
   negative number
+
+
+  ## House Robber
+- **Approach:** Two rolling variables instead of full DP array
+- **Time:** O(n) — single pass
+- **Space:** O(1) — only prev1 and prev2 variables
+- **Key insight:** At each house, max = max(skip current = prev1,
+  rob current = prev2 + num). Roll variables forward each step.
+- **Edge cases:** Empty array returns 0, single house returns nums[0]
