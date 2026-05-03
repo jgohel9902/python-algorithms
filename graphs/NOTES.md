@@ -10,3 +10,13 @@
   how many times we trigger DFS = number of islands
 - **Note:** Modifies the input grid in place. Pass a deep copy
   if original grid must be preserved.
+
+  ## Flood Fill
+- **Approach:** DFS from starting pixel, fill all connected pixels
+  matching the original color
+- **Time:** O(m * n) — each pixel visited at most once
+- **Space:** O(m * n) — recursion stack worst case
+- **Key insight:** Early exit if new color equals original color —
+  prevents infinite recursion
+- **Difference from Number of Islands:** Fills with a new value
+  instead of marking visited, works on integers not strings
