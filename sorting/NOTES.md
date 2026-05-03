@@ -18,3 +18,14 @@
 - **Key insight:** Split until base case (1 element), then merge
   pairs in sorted order back up the call stack
 - **Advantage over Bubble Sort:** Guaranteed O(n log n) vs O(n²)
+
+## Quick Sort
+- **Approach:** Recursive divide and conquer, last element as pivot
+- **Time Best/Avg:** O(n log n) — balanced partitions
+- **Time Worst:** O(n²) — already sorted input, poor pivot choice
+- **Space:** O(n log n) — recursion stack depth
+- **Stable:** No — equal elements may change relative order
+- **Key insight:** Pivot ends up in its final sorted position after
+  each partition step
+- **vs Merge Sort:** Quick Sort faster in practice (cache friendly)
+  but not guaranteed O(n log n) like Merge Sort
