@@ -20,3 +20,14 @@
   prevents infinite recursion
 - **Difference from Number of Islands:** Fills with a new value
   instead of marking visited, works on integers not strings
+
+  ## Word Search
+- **Approach:** Backtracking DFS from every cell as starting point
+- **Time:** O(m * n * 4^L) — L = word length, 4 directions each step
+- **Space:** O(L) — recursion stack depth = word length
+- **Key insight:** Mark visited cells with "#" temporarily to prevent
+  reuse in same path. Restore original value after backtracking.
+- **Early exit:** Return True as soon as word is found — no need
+  to explore remaining cells
+- **vs Flood Fill/Islands:** Uses backtracking to restore state,
+  not permanent marking
