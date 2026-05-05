@@ -13,3 +13,13 @@
 - **Space:** O(1) — only pointer manipulation, no extra list
 - **Key insight:** Dummy head removes edge case of empty result list,
   attach remaining non-null list at the end directly
+
+  ## Linked List Cycle Detection
+- **Approach:** Floyd's Cycle Detection (tortoise and hare)
+- **Time:** O(n) — fast pointer laps slow pointer within n steps
+- **Space:** O(1) — only two pointer variables
+- **Key insight:** If a cycle exists, fast pointer will eventually
+  lap slow pointer and they will meet inside the cycle.
+  If no cycle, fast pointer reaches None first.
+- **Classic alternative:** Hash set to track visited nodes — O(n)
+  time but O(n) space, Floyd's is superior
