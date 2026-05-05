@@ -36,3 +36,13 @@
 - **Key insight:** If chars match → dp[i][j] = dp[i-1][j-1] + 1
   If no match → dp[i][j] = max(dp[i-1][j], dp[i][j-1])
 - **Optimization:** Can reduce to O(n) space using two rolling rows
+
+
+## Coin Change
+- **Approach:** Bottom-up DP array of size (amount + 1)
+- **Time:** O(amount * n) — n = number of coin denominations
+- **Space:** O(amount) — DP array of size amount + 1
+- **Key insight:** dp[0] = 0 (base case), dp[i] = min coins to
+  make amount i. For each amount try every coin: if coin <= amount,
+  dp[a] = min(dp[a], dp[a - coin] + 1)
+- **Return -1:** If dp[amount] still infinity, amount unreachable
