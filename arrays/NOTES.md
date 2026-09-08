@@ -17,3 +17,12 @@
 - **Time:** O(n) — single pass
 - **Space:** O(n) — set storage
 - **Key insight:** If a number is already in the set, we found a duplicate immediately
+
+## Three Sum
+- **Approach:** Sort + Two Pointers, fix one element per iteration
+- **Time:** O(n²) — outer loop O(n), inner two pointers O(n)
+- **Space:** O(1) — no extra data structures excluding output
+- **Key insight:** Sort first to enable two pointer technique and
+  easy duplicate skipping
+- **Duplicate handling:** Skip same values for i, left, and right
+  pointers to avoid duplicate triplets in output
