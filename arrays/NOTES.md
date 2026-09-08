@@ -26,3 +26,11 @@
   easy duplicate skipping
 - **Duplicate handling:** Skip same values for i, left, and right
   pointers to avoid duplicate triplets in output
+
+  ## Product of Array Except Self
+- **Approach:** Prefix pass left→right, suffix pass right→left
+- **Time:** O(n) — two passes through array
+- **Space:** O(1) — only output array used, no extra arrays
+- **Key insight:** result[i] = product of all left of i × product
+  of all right of i. Build both in-place on result array.
+- **No division:** Works even when array contains zeros
