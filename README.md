@@ -1,3 +1,5 @@
+![tests](https://github.com/jgohel9902/python-algorithms/actions/workflows/tests.yml/badge.svg)
+
 # 🧠 Python Algorithms
 
 A structured collection of algorithm and data structure solutions
